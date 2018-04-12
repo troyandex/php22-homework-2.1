@@ -2,6 +2,9 @@
 $json = file_get_contents(__DIR__ . '/phone-book.json');
 $data = json_decode($json, true);
 $item = "";
+echo "<pre>";
+print_r($json); // выводит
+print_r($data); // NULL
 ?>
 
 <!DOCTYPE html>
@@ -24,14 +27,14 @@ $item = "";
                 <caption></caption>
                 <thead>
                     <tr>
-                        <th">Имя</th>
-                        <th">Фамилия</th>
-                        <th">Адрес</th>
-                        <th">Телефон</th>
+                        <th>Имя</th>
+                        <th>Фамилия</th>
+                        <th>Адрес</th>
+                        <th>Телефон</th>
                     </tr>
                 </thead>
                 <tbody>
-                <?php foreach ($data as $item): ?>
+                <?php foreach($data as $item): ?>
                     <tr>
                         <td><?php echo $item['firstName']; ?></td>
                         <td><?php echo $item['lastName']; ?></td>
