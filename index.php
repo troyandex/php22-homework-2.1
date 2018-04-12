@@ -2,9 +2,9 @@
 $json = file_get_contents(__DIR__ . '/phone-book.json');
 $data = json_decode($json, true);
 $item = "";
-echo "<pre>";
-print_r($json); // выводит
-print_r($data); // NULL
+//echo "<pre>";
+//print_r($json);
+//print_r($data);
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +16,9 @@ print_r($data); // NULL
     <style>
         .container { max-width: 950px; margin: 0 auto; }
         h1 { font-weight: bold;}
+        table { border-collapse: collapse; }
+        td , th { padding: 5px; border: 1px solid black; }
+
     </style>
 </head>
 
